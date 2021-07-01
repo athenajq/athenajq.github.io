@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: neon;
+  src: url(../assets/Neoneon.otf);
+}
+
+body,
+html {
+  background: #000;
+  font-family: "Fira Code", monospace;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.neon {
+  font-family: neon;
+  font-size: 140px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 8px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -100%);
+  text-align: center;
+  text-shadow: 1px 0px 5px #fff, 2px 0px 4px #fff, 3px 0px 4px #fff,
+    2px 0px 3px #fff, 2px 3px 15px #fff, 10px 0px 30px, 5px 0px 125px,
+    20px 0vw 300px #fff, 40px 0vw 300px #fff;
+}
+
+.neon-white {
+  font-family: neon;
+  font-size: 90px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 8px;
+  width: 100%;
+  text-align: center;
+  text-shadow: 1px 0px 5px #ffffff, 2px 0px 4px #ffffff, 3px 0px 4px #ffffff,
+    2px 0px 3px #fff, 2px 3px 15px #fff, 10px 0px 30px, 5px 0px 125px,
+    20px 0vw 300px #fff, 40px 0vw 300px #fff;
+}
+
+.flicker-slow {
+  animation: flicker 3s linear infinite;
+}
+
+.flicker-fast {
+  animation: flicker 1s linear infinite;
+}
+
+.flicker-medium {
+  animation: flicker 2s linear infinite;
+}
+
+@keyframes flicker {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    //text-shadow: none;
+    opacity: 0.99;
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+  }
+}
+
+.neon-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-bar {
+  width: 100%;
+  position: absolute;
+  font-family: "Fira Code", monospace;
+  margin-top: 10px;
+}
+
+.nav-item {
+  float: right;
+  display: inline-block;
+  margin-right: 10px;
+  height: 100%;
+  width: 10%;
+  height: 100%;
+  font-size: 14px;
+}
+
+h7 {
+  color: white;
+}
+
+p {
+  font-family: "Fira Code", monospace;
+  color: white;
+  width: 85%;
+  font-size: 18px;
+}
+
+.gif {
+  width: 50%;
+  aspect-ratio: 1;
+  filter: brightness(0) invert(1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 20px;
+}
+
+#projects {
+  margin-left: 20px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: "Fira Code", monospace;
+  background-color: rgba(59, 59, 59, 0);
+  color: white;
+}
+
+label {
+  color: white;
+  font-size: small;
+}
+
+input[type="submit"] {
+  background-color: #ffffff;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Fira Code", monospace;
+}
+
+input[type="submit"]:hover {
+  background-color: #727272;
+}
+
+.container {
+  padding: 10px;
+  width: 50vh;
+  height: 80%;
+  z-index: 5;
+  position: absolute;
+  top: 80px;
+  transform: translate(-20%, 0%);
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 100vh solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 100vh solid #1f1f1f;
+}
+
+.triangle-container {
+  position: absolute;
+  right: 30%;
+  top: 0;
+  z-index: 0;
+}
+
+.buffer {
+  background-color: #1f1f1f;
+  height: 100vh;
+  width: 30%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
