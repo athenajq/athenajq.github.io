@@ -1,0 +1,53 @@
+.contact-container {
+  font-size: calc(3vmin + 12px);
+}
+
+.contact-header {
+  padding-top: 25px;
+  padding-left: 40px;
+  width: 67vw;
+  margin: 0px;
+}
+
+.contact-triangle {
+  width: 0;
+  height: 0;
+  border-left: 92vw solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 100vh solid #e55d4b;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.contact-email {
+  color: #357986;
+  font-weight: 900;
+}
+
+.contact-intro {
+  font-size: calc(2vmin + 25px);
+  margin: 0px;
+  padding: 0px;
+}
+
+.contact-intro-container {
+  width: 50vw;
+  padding-left: 40px;
+  margin-top: 10px;
+}
+
+.contact-form {
+  position: fixed;
+  transform: translate(0%, -50%);
+  right: 30px;
+  width: 30vw;
+  top: 0;
+}
+
+.contact-pun {
+  font-size: large;
+  padding: 0px;
+  margin: 0px;
+}
