@@ -1,36 +1,89 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./css/Contact.css">
+    <link rel="stylesheet" href="./css/Navigation.css">
 </head>
 
 <body>
     <div>
         <div class="navigation">
-
+            <ul style="background-color: #fff;">
+                <li><a href="Contact.html" id="contact">Contact</a></li>
+                <li><a href="Projects.html" id="contact">Projects</a></li>
+                <li><a href="AboutUs.html" id="contact">About Us</a></li>
+                <li style="float: left"><a href="index.html" id="contact">Chook Studios</a></li>
+            </ul>
         </div>
-        <div className="contact-container">
-            <div className="contact-triangle"></div>
-            <h1 className="contact-header">Hey we'd love to hear from you!</h1>
-            <div className="contact-intro-container">
-                <p className="contact-intro">
+        <div class="contact-container">
+            <div class="contact-triangle"></div>
+            <h1 class="contact-header">Hey we'd love to hear from you!</h1>
+            <div class="contact-intro-container">
+                <p class="contact-intro">
                     Reach out at our email
-                    <span className="contact-email">hello@chookstudios.org</span>, fill
+                    <span class="contact-email">hello@chookstudios.org</span>, fill
                     out the form, or find us on social media.
                 </p>
                 <br />
-                <p className="contact-pun">
+                <p class="contact-pun">
                     A lil' birdie told me you had something to say
                 </p>
-                <p className="contact-pun">Send a message our way!</p>
+                <p class="contact-pun">Send a message our way!</p>
             </div>
-            <div className="contact-form" style="top: 50%">
-                <Form />
+            <div class="contact-form" style="top: 50%">
+                <form method="POST" target="hidden_iframe" onsubmit="onSubmit()"
+                    action="https://docs.google.com/forms/d/e/1FAIpQLSd_SCuNQ2GALU6VTKmkSvEydIvdw7FND1McuK--x9iLWDyFTw/formResponse?">
+                    <input type="text" id="name" placeholder="enter name" name="entry.1749425855" id="entry.1749425855"
+                        required />
+                    <input type="email" id="email" placeholder="enter email" name="entry.933391677" id="entry.933391677"
+                        required />
+                    <input type="text" id="subject" placeholder="enter subject" name="entry.1818934784"
+                        id="entry.1818934784" required />
+                    <textarea id="message" value="" placeholder="enter message" name="entry.1572500795"
+                        id="entry.1572500795" required></textarea>
+                    <input type="submit" value="Submit">
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"></iframe>
+                    <p style="display: none" id="success-message">form successfully submitted!!</p>
+                </form>
             </div>
         </div>
     </div>
 </body>
+<script type="text/javascript">
+    function onSubmit() {
+        var inputs = document.getElementsByTagName('input');
+        var bool = true;
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].hasAttribute("required")) {
+                if (inputs[i].value == "") {
+                    alert("Please fill all required fields");
+                    break;
+                    bool = false;
+                }
+            }
+        }
+        var textarea = document.getElementById("message");
+        if (textarea.hasAttribute('required') && textarea.value == "") {
+            alert("Please fill all required fields")
+            bool = false;
+        }
+
+        if (bool) {
+            var p = document.getElementById('success-message').style.display = "block";
+            var inputs = document.getElementsByTagName('input');
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].hasAttribute('required')) {
+                    inputs[i].value = "";
+                }
+            }
+            var textarea = document.getElementById("message");
+            textarea.value = ""
+            setTimeout(() => {
+                document.getElementById('success-message').style.display = "none";
+
+            }, 4000);
+        }
+    }
+</script>
 
 </html>

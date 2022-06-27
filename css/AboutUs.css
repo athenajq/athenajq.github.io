@@ -9,10 +9,12 @@ p {
 }
 
 .mission-container {
+  font-family: Lora, sans-serif;
   width: 100vw;
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  padding-top: 20px;
 }
 
 .mission-statement-container {

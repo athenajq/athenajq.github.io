@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "BebasNeue";
+  src: local("BebasNeue"),
+    url(../fonts/BebasNeue-Regular.ttf) format("truetype");
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+  color: #000;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  font-family: "BebasNeue", sans-serif;
+  font-size: calc(2vmin + 10px);
+}
+
+
+.navigation ul {
+  width: 100vw;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f9cb2a;
+}
+
+.navigation li {
+  float: right;
+}
+
+.navigation li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+/* unvisited link */
+a:link {
+  color: #000;
+}
+
+/* visited link */
+a:visited {
+  color: #000;
+}
+
+#home:hover {
+  color: #000;
+  background-color: #FEDC62;
+}
+
+#home:active {
+  color: #000;
+  background-color: #FEDC62;
+}
+
+#projects:hover {
+  color: #000;
+  background-color: #78B7C2;
+}
+
+#projects:active {
+  color: #000;
+  background-color: #78B7C2;
+}
+
+#aboutus:hover {
+  color: #000;
+  background-color: #fedc62;
+}
+
+#aboutus:active {
+  color: #000;
+  background-color: #fedc62;
+}
+
+#contact:active {
+  color: #000;
+  background-color: #E55D4B;
+
+}
+
+#contact:hover {
+  color: #000;
+  background-color: #E55D4B;
+}
