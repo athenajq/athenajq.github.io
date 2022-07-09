@@ -4,31 +4,103 @@ body {
 }
 
 .app-main {
-    background-color: #f9cb2a;
+    background-color: #5897D2;
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: "BebasNeue", 'san-serif';
+    font-family: "Inconsolata", 'san-serif';
 }
 
-.app-image {
-    background-color: #fff;
-    width: 35vw;
-    height: 35vw;
+.bubble {
+    bottom: 0;
+    height: 90vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 0;
+}
+
+.title {
+    height: 70vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.subtitle {
+    width: 5%;
+    z-index: 10;
+    position: absolute;
+    left: 60%;
+    top: 75%;
+    transform: translate(-60%, -75%);
+}
+
+.text {
+    z-index: 5;
+    color: #fff;
+    font-size: calc(1vmin + 12px);
+    padding: 25px;
+    margin: 30px;
+    height: 70%;
+    display: block;
+    width: 30vw;
+}
+
+.empty {
+    height: 50%;
+}
+
+
+span {
+    border-right: .08em solid;
+    animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.button {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    padding: 15px 30px;
+    margin: 20px;
+    font-size: calc(1vmin + 10px);
+    font-family: "Inconsolata", 'san-serif';
+    background-color: #FFE99B;
+    border: 3px solid #F8C0E8;
+    color: #DE73EF;
+    border-radius: 10px;
+    text-align: center;
     display: inline-block;
 }
 
-.app-slogan {
-    width: 35vw;
-    height: 35vw;
-    display: inline-block;
-    font-size: 2.5em;
-    text-align: left;
+a {
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
 }
 
-.app-container {
-    display: flex;
-    justify-content: space-evenly;
+a:link {
+    color: #DE73EF;
+}
+
+/* visited link */
+a:visited {
+    color: #DE73EF;
+}
+
+a:hover {
+    color: #DE73EF;
+}
+
+a:active {
+    color: #DE73EF;
 }

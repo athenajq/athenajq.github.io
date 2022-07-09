@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "BebasNeue";
-  src: local("BebasNeue"),
-    url(../fonts/BebasNeue-Regular.ttf) format("truetype");
+  font-family: "Inconsolata";
+  src: local("Inconsolata"),
+    url(../fonts/Inconsolata-VariableFont_wdth\,wght.ttf) format("truetype");
 }
 
 body {
@@ -11,14 +11,16 @@ body {
 }
 
 .navigation {
-  color: #000;
+  color: #58BCD2;
   width: 100vw;
   margin: 0;
   padding: 0;
   position: fixed;
   top: 0;
-  font-family: "BebasNeue", sans-serif;
-  font-size: calc(2vmin + 10px);
+  font-family: "Inconsolata", sans-serif;
+  font-variation-settings: 'wght' 700;
+  font-size: calc(2vmin + 5px);
+  line-height: 14px;
 }
 
 
@@ -28,68 +30,61 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #f9cb2a;
+  background: rgb(222, 115, 239);
+  height: 100%;
+  background: linear-gradient(90deg, rgba(222, 115, 239, 1) 0%, rgba(248, 192, 232, 1) 36%);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 
 .navigation li {
-  float: right;
+  flex: 1;
 }
 
 .navigation li a {
   display: block;
   text-align: center;
-  padding: 14px 16px;
+  padding: 8px 16px;
   text-decoration: none;
 }
 
 
 /* unvisited link */
 a:link {
-  color: #000;
+  color: #58BCD2;
 }
 
 /* visited link */
 a:visited {
-  color: #000;
+  color: #58BCD2;
 }
 
-#home:hover {
-  color: #000;
-  background-color: #FEDC62;
+a:hover {
+  color: #58BCD2;
 }
 
-#home:active {
-  color: #000;
-  background-color: #FEDC62;
+a:active {
+  color: #58BCD2;
 }
 
-#projects:hover {
-  color: #000;
-  background-color: #78B7C2;
+#main {
+  color: #FFE99B;
+  text-align: left;
 }
 
-#projects:active {
-  color: #000;
-  background-color: #78B7C2;
+#main:visited {
+  color: #FFE99B
 }
 
-#aboutus:hover {
-  color: #000;
-  background-color: #fedc62;
+#main:link {
+  color: #FFE99B
 }
 
-#aboutus:active {
-  color: #000;
-  background-color: #fedc62;
+#main:hover {
+  color: #FFE99B
 }
 
-#contact:active {
-  color: #000;
-  background-color: #E55D4B;
-
-}
-
-#contact:hover {
-  color: #000;
-  background-color: #E55D4B;
+#main:active {
+  color: #FFE99B
 }

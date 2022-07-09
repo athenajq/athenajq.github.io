@@ -8,20 +8,76 @@
 <body>
     <div class="navigation">
         <ul>
-            <li><a href="Contact.html" id="home">Contact</a></li>
-            <li><a href="Projects.html" id="home">Projects</a></li>
-            <li><a href="AboutUs.html" id="home">About Us</a></li>
-            <li style="float: left"><a href="index.html" id="home">Chook Studios</a></li>
+            <li><a href="Contact.html">contact</a></li>
+            <li><a href="Projects.html">projects</a></li>
+            <li><a href="AboutUs.html">about</a></li>
+            <li><a href="Play.html">play ></a></li>
+            <li style="flex-grow: 5;"><a></a></li>
+            <li style="font-variation-settings: 'wght' 900;"><a href="index.html" id="main">chook<br />studios</a></li>
         </ul>
     </div>
     <div class="app-main">
-        <div class="app-container">
-            <div class="app-image"></div>
-            <div class="app-slogan">
-                <h1>hatching innovative games</h1>
-            </div>
+        <img src="./assets/bubble.png" alt="" class="bubble"></img>
+        <div class="text">
+            <p id="p0"></p>
+            <div class="empty"></div>
+            <p id="p1"></p>
+            <p id="p2" style="color: #FFE99B;"></p>
+            <p id="p3"></p>
         </div>
+        <img src="./assets/chook.png" alt="chook" class="title">
+        <img src="./assets/studios.png" alt="studios" class="subtitle"></img>
+        </img>
     </div>
 </body>
+
+<script>
+    window.onload = function () {
+        console.log("hi")
+        // array with texts to type in typewriter
+        var dataText = ["hey! we are", "we hatch innovative games", "&& ", "teach female and nonbinary identifying students game dev—by teens for teens"];
+
+        // type one text in the typwriter
+        // keeps calling itself until the text is finished
+        function typeWriter(text, j, i, fnCallback) {
+            // chekc if text isn't finished yet
+            if (i < (text.length)) {
+                // add next character to h1
+                console.log(document.getElementById('p' + j))
+                document.getElementById('p' + j).innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+
+                // wait for a while and call this function again for next character
+                setTimeout(function () {
+                    typeWriter(text, j, i + 1, fnCallback)
+                }, 100);
+            }
+            // text finished, call callback if there is a callback function
+            else if (typeof fnCallback == 'function') {
+                // call callback after timeout
+                setTimeout(fnCallback, 700);
+            }
+        }
+        // start a typewriter animation for a text in the dataText array
+        function StartTextAnimation(i) {
+            if (typeof dataText[i] == 'undefined') {
+                setTimeout(function () {
+                    StartTextAnimation(0);
+                }, 20000);
+            }
+            // check if dataText[i] exists
+            if (i < dataText[i].length) {
+                // text exists! start typewriter animation
+                typeWriter(dataText[i], i, 0, function () {
+                    document.getElementById('p' + i).innerHTML = dataText[i];
+                    // after callback (and whole text has been animated), start next text
+                    StartTextAnimation(i + 1);
+                });
+            }
+        }
+        // start the text animation
+        StartTextAnimation(0);
+    };
+
+</script>
 
 </html>
