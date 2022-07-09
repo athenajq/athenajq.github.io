@@ -47,7 +47,7 @@ body {
     margin: 30px;
     height: 70%;
     display: block;
-    width: 30vw;
+    width: 25vw;
 }
 
 .empty {
@@ -103,4 +103,16 @@ a:hover {
 
 a:active {
     color: #DE73EF;
+}
+
+#id {
+    color: #DE73EF;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+#links {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
 }

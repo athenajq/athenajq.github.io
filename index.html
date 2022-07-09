@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="./css/Navigation.css">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="https://kit.fontawesome.com/415c7efa4d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -24,35 +25,48 @@
             <p id="p1"></p>
             <p id="p2" style="color: #FFE99B;"></p>
             <p id="p3"></p>
+            <div id="socials">
+            </div>
         </div>
+
         <div class="button">
             <a href="Story.html">tell your story ></a>
         </div>
-        <img src="./assets/chook.png" alt="chook" class="title">
+        <img src="./assets/chook.png" alt="chook" class="title"> </img>
         <img src="./assets/studios.png" alt="studios" class="subtitle"></img>
-        </img>
     </div>
 </body>
 
 <script>
     window.onload = function () {
-        console.log("hi")
         // array with texts to type in typewriter
-        var dataText = ["hey! we are", "we hatch innovative games", "&& ", "teach female and nonbinary identifying students game dev—by teens for teens"];
+        var dataText = ["hey! we are", "we hatch innovative games", "&& ", "teach female and nonbinary identifying students game dev—by teens for teens", "a b c"];
 
         // type one text in the typwriter
         // keeps calling itself until the text is finished
         function typeWriter(text, j, i, fnCallback) {
-            // chekc if text isn't finished yet
+            // check if text isn't finished yet
             if (i < (text.length)) {
-                // add next character to h1
-                console.log(document.getElementById('p' + j))
-                document.getElementById('p' + j).innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+                if (j < dataText.length - 1) {
+                    // add next character to h1
+                    document.getElementById('p' + j).innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
 
-                // wait for a while and call this function again for next character
-                setTimeout(function () {
-                    typeWriter(text, j, i + 1, fnCallback)
-                }, 100);
+                    // wait for a while and call this function again for next character
+                    setTimeout(function () {
+                        typeWriter(text, j, i + 1, fnCallback)
+                    }, 100);
+                } else {
+                    if (i == 0) {
+                        document.getElementById('socials').innerHTML += '<a id="links" href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram" id="icon0" style="color: #DE73EF; margin-right: 10px; padding-right: 7px; font-size: 1.4em"></i></a>'
+                    } else if (i == 1) {
+                        document.getElementById('socials').innerHTML += '<a id="links" href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook" id="icon1" style="color: #DE73EF; margin-right: 10px; padding-right: 7px; font-size: 1.4em"></i></a>'
+                    } else if (i == 2) {
+                        document.getElementById('socials').innerHTML += '<a id="links" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter" id="icon2" style="color: #DE73EF; margin-right: 10px; padding-right: 7px; font-size: 1.4em"></i></a>'
+                    }
+                    setTimeout(function () {
+                        typeWriter(text, j, i + 1, fnCallback)
+                    }, 100)
+                }
             }
             // text finished, call callback if there is a callback function
             else if (typeof fnCallback == 'function') {
