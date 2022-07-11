@@ -17,8 +17,9 @@
             <li style="font-variation-settings: 'wght' 900;"><a href="index.html" id="main">chook<br />studios</a></li>
         </ul>
     </div>
-    <div class="app-main">
+    <div class="app-main" id="app-main">
         <img src="./assets/bubble.png" alt="" class="bubble"></img>
+        <img src="./assets/chook.gif" alt="chook" class="title" height="100vh"></img>
         <div class="text">
             <p id="p0"></p>
             <div class="empty"></div>
@@ -30,10 +31,8 @@
         </div>
 
         <div class="button">
-            <a href="Story.html">tell your story ></a>
+            <a href="Story.html" id="btn">tell your story ></a>
         </div>
-        <img src="./assets/chook.png" alt="chook" class="title"> </img>
-        <img src="./assets/studios.png" alt="studios" class="subtitle"></img>
     </div>
 </body>
 
@@ -50,19 +49,19 @@
                 if (j < dataText.length - 1) {
                     // add next character to h1
                     document.getElementById('p' + j).innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
-
-                    // wait for a while and call this function again for next character
                     setTimeout(function () {
                         typeWriter(text, j, i + 1, fnCallback)
                     }, 100);
                 } else {
+                    var newElement = document.createElement('a');
                     if (i == 0) {
-                        document.getElementById('socials').innerHTML += '<a id="links" href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram" id="icon0" style="color: #DE73EF; margin-right: 10px; padding-right: 7px; font-size: 1.4em"></i></a>'
+                        newElement.innerHTML = '<a id="links" href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram" id="icon0" style="color: #DE73EF; margin-right: 10px; padding-right: 7px; font-size: 1.4em"></i></a>'
                     } else if (i == 1) {
-                        document.getElementById('socials').innerHTML += '<a id="links" href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook" id="icon1" style="color: #DE73EF; margin-right: 10px; padding-right: 7px; font-size: 1.4em"></i></a>'
+                        newElement.innerHTML = '<a id="links" href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook" id="icon1" style="color: #DE73EF; margin-right: 10px; padding-right: 7px; font-size: 1.4em"></i></a>'
                     } else if (i == 2) {
-                        document.getElementById('socials').innerHTML += '<a id="links" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter" id="icon2" style="color: #DE73EF; margin-right: 10px; padding-right: 7px; font-size: 1.4em"></i></a>'
+                        newElement.innerHTML = '<a id="links" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter" id="icon2" style="color: #DE73EF; margin-right: 10px; padding-right: 7px; font-size: 1.4em"></i></a>'
                     }
+                    document.getElementById('socials').appendChild(newElement);
                     setTimeout(function () {
                         typeWriter(text, j, i + 1, fnCallback)
                     }, 100)

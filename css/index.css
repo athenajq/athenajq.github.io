@@ -22,7 +22,7 @@ body {
 }
 
 .title {
-    height: 70vh;
+    height: 100vh;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -82,26 +82,26 @@ span {
     display: inline-block;
 }
 
-a {
+#btn {
     padding: 10px 20px;
     margin: 10px;
     text-decoration: none;
 }
 
-a:link {
+#btn:link {
     color: #DE73EF;
 }
 
 /* visited link */
-a:visited {
+#btn:visited {
     color: #DE73EF;
 }
 
-a:hover {
+#btn:hover {
     color: #DE73EF;
 }
 
-a:active {
+#btn:active {
     color: #DE73EF;
 }
 
@@ -115,4 +115,11 @@ a:active {
     text-decoration: none;
     padding: 0;
     margin: 0;
+}
+
+.footprints {
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+    height: 35vh;
 }
