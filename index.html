@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="./css/Navigation.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://kit.fontawesome.com/415c7efa4d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li><a href="Contact.html">contact</a></li>
+            <li><a href="Projects.html">projects</a></li>
+            <li><a href="AboutUs.html">about</a></li>
+            <li><a href="Play.html">play ></a></li>
+            <li style="flex-grow: 5;"><a></a></li>
+            <li style="font-variation-settings: 'wght' 900;"><a href="index.html" id="main">chook<br />studios</a></li>
+        </ul>
+    </div>
+    <div class="app-main" id="app-main">
+        <img src="./assets/bubble.png" alt="" class="bubble"></img>
+        <img src="./assets/chook.gif" alt="chook" class="title" height="100vh"></img>
+        <div class="text">
+            <p id="p0"></p>
+            <div class="empty"></div>
+            <p id="p1"></p>
+            <p id="p2" style="color: #FFE99B;"></p>
+            <p id="p3"></p>
+            <div id="socials">
+            </div>
+        </div>
+
+        <div class="button">
+            <a href="Story.html" id="btn">tell your story ></a>
+        </div>
+    </div>
+</body>
+
+<script>
+    window.onload = function () {
+        // array with texts to type in typewriter
+        var dataText = ["hey! we are", "we hatch innovative games", "&& ", "teach female and nonbinary identifying students game dev—by teens for teens", "a b c"];
+
+        // type one text in the typwriter
+        // keeps calling itself until the text is finished
+        function typeWriter(text, j, i, fnCallback) {
+            // check if text isn't finished yet
+            if (i < (text.length)) {
+                if (j < dataText.length - 1) {
+                    // add next character to h1
+                    document.getElementById('p' + j).innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+                    setTimeout(function () {
+                        typeWriter(text, j, i + 1, fnCallback)
+                    }, 100);
+                } else {
+                    var newElement = document.createElement('a');
+                    if (i == 0) {
+                        newElement.innerHTML = '<a id="links" href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram" id="icon0" style="color: #DE73EF; margin-right: 10px; padding-right: 7px; font-size: 1.4em"></i></a>'
+                    } else if (i == 1) {
+                        newElement.innerHTML = '<a id="links" href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook" id="icon1" style="color: #DE73EF; margin-right: 10px; padding-right: 7px; font-size: 1.4em"></i></a>'
+                    } else if (i == 2) {
+                        newElement.innerHTML = '<a id="links" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter" id="icon2" style="color: #DE73EF; margin-right: 10px; padding-right: 7px; font-size: 1.4em"></i></a>'
+                    }
+                    document.getElementById('socials').appendChild(newElement);
+                    setTimeout(function () {
+                        typeWriter(text, j, i + 1, fnCallback)
+                    }, 100)
+                }
+            }
+            // text finished, call callback if there is a callback function
+            else if (typeof fnCallback == 'function') {
+                // call callback after timeout
+                setTimeout(fnCallback, 700);
+            }
+        }
+        // start a typewriter animation for a text in the dataText array
+        function StartTextAnimation(i) {
+            if (typeof dataText[i] == 'undefined') {
+                setTimeout(function () {
+                    StartTextAnimation(0);
+                }, 20000);
+            }
+            // check if dataText[i] exists
+            if (i < dataText[i].length) {
+                // text exists! start typewriter animation
+                typeWriter(dataText[i], i, 0, function () {
+                    document.getElementById('p' + i).innerHTML = dataText[i];
+                    // after callback (and whole text has been animated), start next text
+                    StartTextAnimation(i + 1);
+                });
+            }
+        }
+        // start the text animation
+        StartTextAnimation(0);
+    };
+
+</script>
+
+</html>

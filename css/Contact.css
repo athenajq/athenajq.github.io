@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Lora";
+  src: local("Lora"),
+    url(../fonts/Lora-VariableFont_wght.ttf) format("truetype");
+}
+
+p {
+  font-family: Lora, sans-serif;
+}
+
+.contact-container {
+  font-family: "BebasNeue", sans-serif;
+  margin-top: 20px;
+  padding-top: 40px;
+  font-size: calc(3vmin + 10px);
+}
+
+.contact-header {
+  padding-top: 27px;
+  padding-left: 40px;
+  width: 67vw;
+  margin: 0px;
+}
+
+.contact-triangle {
+  width: 0;
+  height: 0;
+  border-left: 92vw solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 100vh solid #e55d4b;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.contact-email {
+  color: #357986;
+  font-weight: 900;
+}
+
+.contact-intro {
+  font-size: calc(2vmin + 20px);
+  margin: 0px;
+  padding-top: 15px;
+}
+
+.contact-intro-container {
+  width: 50vw;
+  padding-left: 40px;
+  margin-top: 10px;
+}
+
+.contact-form {
+  position: fixed;
+  transform: translate(0%, -50%);
+  right: 30px;
+  width: 30vw;
+  top: 0;
+}
+
+.contact-pun {
+  font-size: large;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+form {
+  font-size: calc(2vmin + 15px);
+  margin-top: 35px;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input,
+textarea {
+  font-family: Lora, sans-serif;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+input:focus {
+  border: 2px solid #357986;
+}
+
+#name,
+#email,
+#submit,
+#subject {
+  flex-grow: 0.05;
+}
+
+#message {
+  flex-grow: 0.7;
+}
+
+#success-message {
+  font-size: small;
+}

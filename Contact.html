@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="./css/Contact.css">
+    <link rel="stylesheet" href="./css/Navigation.css">
+    <!-- <meta http-equiv='Content-Security-Policy' content="frame-ancestors https: https://docs.google.com"> -->
+</head>
+
+<body>
+    <div>
+        <div class="navigation">
+            <ul>
+                <li><a href="Contact.html">contact</a></li>
+                <li><a href="Projects.html">projects</a></li>
+                <li><a href="AboutUs.html">about</a></li>
+                <li><a href="Play.html">play ></a></li>
+                <li style="flex-grow: 5;"><a></a></li>
+                <li style="font-variation-settings: 'wght' 900;"><a href="index.html" id="main">chook<br />studios</a>
+                </li>
+            </ul>
+        </div>
+        <div class="contact-container">
+            <div class="contact-triangle"></div>
+            <h1 class="contact-header">Hey we'd love to hear from you!</h1>
+            <div class="contact-intro-container">
+                <p class="contact-intro">
+                    Reach out at our email
+                    <span class="contact-email">hello@chookstudios.org</span>, fill
+                    out the form, or find us on social media.
+                </p>
+                <br />
+                <p class="contact-pun">
+                    A lil' birdie told me you had something to say
+                </p>
+                <p class="contact-pun">Send a message our way!</p>
+            </div>
+            <div class="contact-form" style="top: 50%">
+                <form id="form" target="hidden_iframe">
+                    <input type="text" id="name" placeholder="enter name" name="Name" id="entry.1749425855" required />
+                    <input type="email" id="email" placeholder="enter email" name="Email" id="entry.933391677"
+                        required />
+                    <input type="text" id="subject" placeholder="enter subject" name="Subject" id="entry.1818934784"
+                        required />
+                    <textarea id="message" value="" placeholder="enter message" name="Message" id="entry.1572500795"
+                        required></textarea>
+                    <input type="submit" id="submit-form" value="Submit">
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"></iframe>
+                    <p style="display: none" id="success-message">form successfully submitted!!</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+    var $form = $('form#form'),
+        url = 'https://script.google.com/macros/s/AKfycbxlbiSYGm5xUPBvljrkoE1hnUIHqeS_X4yhiJO2HbX9pnLXcDgkjsQmU2RUW9vAjG20/exec'
+
+    $('#submit-form').on('click', function (e) {
+        var inputs = document.getElementsByTagName('input');
+        var textarea = document.getElementById("message");
+        var data = {};
+        for (var i = 0; i < inputs.length; i++) {
+            data[inputs[i].name] = inputs[i].value
+        }
+        data[textarea.name] = textarea.value;
+        if (validate) {
+            e.preventDefault();
+            var jqxhr = $.ajax({
+                url: url,
+                method: "GET",
+                dataType: "json",
+                data: data
+            }).done(
+                success()
+            ).fail((e) => {
+                console.log("error " + e)
+                var p = document.getElementById('success-message')
+                p.validate = "Oops! There was an error. Please try again."
+                p.style.display = "block";
+            });
+        }
+    })
+
+    function validate() {
+        var inputs = document.getElementsByTagName('input');
+        var bool = true;
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].hasAttribute("required")) {
+                if (inputs[i].value == "") {
+                    alert("Please fill all required fields");
+                    return false;
+                }
+            }
+        }
+        var textarea = document.getElementById("message");
+        if (textarea.hasAttribute('required') && textarea.value == "") {
+            alert("Please fill all required fields")
+            return false;
+        }
+        return true;
+    }
+
+    function success() {
+        var p = document.getElementById('success-message').style.display = "block";
+        var inputs = document.getElementsByTagName('input');
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].hasAttribute('required')) {
+                inputs[i].value = "";
+            }
+        }
+        var textarea = document.getElementById("message");
+        textarea.value = ""
+        setTimeout(() => {
+            document.getElementById('success-message').style.display = "none";
+
+        }, 4000);
+    }
+</script>
+
+</html>

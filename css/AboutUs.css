@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "Lora";
+  src: local("Lora"),
+    url(../fonts/Lora-VariableFont_wght.ttf) format("truetype");
+}
+
+p {
+  font-family: Lora, sans-serif;
+}
+
+.mission-container {
+  font-family: Lora, sans-serif;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+.mission-statement-container {
+  width: 40vw;
+  padding: 30px;
+  font-family: Lora, sans-serif;
+  font-size: 1.5em;
+  display: inline-block;
+}
+
+.mission-image {
+  background-color: #e2e2e2;
+  width: 30vw;
+  height: 30vw;
+  display: inline-block;
+  margin: 40px;
+  padding: 20px;
+}
+
+.team-container {
+  font-family: Lora, sans-serif;
+  font-size: 1.5em;
+  display: inline-block;
+  height: 85vh;
+}
+
+.team-title {
+  padding-left: 50px;
+  margin-left: 50px;
+}
+
+.team-bios {
+  width: 90vw;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, 0%);
+}
+
+.team-bio-image {
+  background-color: #e2e2e2;
+  height: 40vh;
+}
+
+.team-bio {
+  margin: 0px 20px;
+}
+
+.team-bio-name {
+  font-weight: bolder;
+  width: 100%;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.team-bio-description {
+  font-size: medium;
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+}
+
+.team-pun {
+  padding-left: 50px;
+  margin-left: 50px;
+  margin-top: 0px;
+  padding-top: 0px;
+  font-size: large;
+}

@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Inconsolata";
+  src: local("Inconsolata"),
+    url(../fonts/Inconsolata-VariableFont_wdth\,wght.ttf) format("truetype");
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+  z-index: 10;
+  color: #58BCD2;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  font-family: "Inconsolata", sans-serif;
+  font-variation-settings: 'wght' 700;
+  font-size: calc(2vmin + 5px);
+  line-height: 14px;
+}
+
+
+.navigation ul {
+  height: 100%;
+  width: 100vw;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 0px;
+  overflow: hidden;
+  background: rgb(222, 115, 239);
+  background: linear-gradient(90deg, rgba(222, 115, 239, 1) 0%, rgba(248, 192, 232, 1) 36%);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.navigation li {
+  flex: 1;
+  height: 100%;
+}
+
+.navigation li a {
+  display: block;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  height: 100%;
+}
+
+
+/* unvisited link */
+a:link {
+  color: #58BCD2;
+}
+
+/* visited link */
+a:visited {
+  color: #58BCD2;
+}
+
+a:hover {
+  color: #58BCD2;
+}
+
+a:active {
+  color: #58BCD2;
+}
+
+#main {
+  color: #FFE99B;
+  text-align: left;
+}
+
+#main:visited {
+  color: #FFE99B
+}
+
+#main:link {
+  color: #FFE99B
+}
+
+#main:hover {
+  color: #FFE99B
+}
+
+#main:active {
+  color: #FFE99B
+}

@@ -1,0 +1,125 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.app-main {
+    background-color: #5897D2;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Inconsolata", 'san-serif';
+}
+
+.bubble {
+    bottom: 0;
+    height: 90vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 0;
+}
+
+.title {
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.subtitle {
+    width: 5%;
+    z-index: 10;
+    position: absolute;
+    left: 60%;
+    top: 75%;
+    transform: translate(-60%, -75%);
+}
+
+.text {
+    z-index: 5;
+    color: #fff;
+    font-size: calc(1vmin + 12px);
+    padding: 25px;
+    margin: 30px;
+    height: 70%;
+    display: block;
+    width: 25vw;
+}
+
+.empty {
+    height: 50%;
+}
+
+
+span {
+    border-right: .08em solid;
+    animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.button {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    padding: 15px 30px;
+    margin: 20px;
+    font-size: calc(1vmin + 10px);
+    font-family: "Inconsolata", 'san-serif';
+    background-color: #FFE99B;
+    border: 3px solid #F8C0E8;
+    color: #DE73EF;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+#btn {
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+#btn:link {
+    color: #DE73EF;
+}
+
+/* visited link */
+#btn:visited {
+    color: #DE73EF;
+}
+
+#btn:hover {
+    color: #DE73EF;
+}
+
+#btn:active {
+    color: #DE73EF;
+}
+
+#id {
+    color: #DE73EF;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+#links {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footprints {
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+    height: 35vh;
+}
