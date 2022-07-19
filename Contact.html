@@ -3,11 +3,11 @@
 <head>
     <link rel="stylesheet" href="./css/Contact.css">
     <link rel="stylesheet" href="./css/Navigation.css">
-    <!-- <meta http-equiv='Content-Security-Policy' content="frame-ancestors https: https://docs.google.com"> -->
+    <script src="https://kit.fontawesome.com/415c7efa4d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div>
+    <div class="main">
         <div class="navigation">
             <ul>
                 <li><a href="Contact.html">contact</a></li>
@@ -20,53 +20,235 @@
             </ul>
         </div>
         <div class="contact-container">
-            <div class="contact-triangle"></div>
-            <h1 class="contact-header">Hey we'd love to hear from you!</h1>
-            <div class="contact-intro-container">
-                <p class="contact-intro">
-                    Reach out at our email
-                    <span class="contact-email">hello@chookstudios.org</span>, fill
-                    out the form, or find us on social media.
-                </p>
-                <br />
-                <p class="contact-pun">
-                    A lil' birdie told me you had something to say
-                </p>
-                <p class="contact-pun">Send a message our way!</p>
-            </div>
-            <div class="contact-form" style="top: 50%">
-                <form id="form" target="hidden_iframe">
-                    <input type="text" id="name" placeholder="enter name" name="Name" id="entry.1749425855" required />
-                    <input type="email" id="email" placeholder="enter email" name="Email" id="entry.933391677"
-                        required />
-                    <input type="text" id="subject" placeholder="enter subject" name="Subject" id="entry.1818934784"
-                        required />
-                    <textarea id="message" value="" placeholder="enter message" name="Message" id="entry.1572500795"
-                        required></textarea>
-                    <input type="submit" id="submit-form" value="Submit">
-                    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"></iframe>
-                    <p style="display: none" id="success-message">form successfully submitted!!</p>
-                </form>
+            <h1 class="contact-header">we'd love to hear from you!</h1>
+            <p class="contact-intro">email us at <a class="emails"
+                    href="mailto:hello@chookstudios.org">hello@chookstudios.org</a> or
+                fill out one of the contact
+                forms below </p>
+            <div class="box-container">
+                <div class="row">
+                    <div class="box general">
+                        <p>a lil birdy told me you had something to say</p>
+                        <h2>general inquiries</h2>
+                        <img src="assets/squiggly.png" width="25%" />
+                        <br />
+                        <p>for if you just want to say ‘hey!’ or you’ve got a good chicken pun you’d like to see on our
+                            website or maybe you’d like a coop-cake or you just have a question—send a message our way!
+                        </p>
+                        <button onclick="generalForm()" id="general-button">say hi ></button>
+                        <div class="form" id="form general-form" style="display: none">
+                            <form id="form" target="hidden_iframe">
+                                <input type="text" id="name" placeholder="enter name" name="Name" class="general"
+                                    required />
+                                <input type="email" id="email" placeholder="enter email" name="Email" required
+                                    class="general" />
+                                <input type="text" id="subject" placeholder="enter subject" name="Subject" required
+                                    class="general" />
+                                <textarea id="message" value="" placeholder="enter message" name="Message"
+                                    class="general" required></textarea>
+                                <input type="submit" id="submit-form" value="submit >" class="general">
+                                <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"></iframe>
+                                <p style="display: none" id="success-message-general" class="general">form successfully
+                                    submitted!!</p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="box story">
+                        <p>you’re im-peck-able!</p>
+                        <h2>tell your story</h2>
+                        <img src="assets/squiggly.png" width="25%" />
+                        <br />
+                        <p>work with us to share about your mental health journey through [game name]. email <a
+                                class="emails" href="mailto:[gamename]@chookstudios.org">[game
+                                name]@chookstudios.org</a> or fill out the form below!</p>
+                        <button onclick="storyForm()" id="story-button">form ></button>
+                        <div class="form" id="form story-form" style="display: none">
+                            <form id="form" target="hidden_iframe">
+                                <input type="text" id="name" placeholder="enter name" name="Name" required
+                                    class="story" />
+                                <input type="email" id="email" placeholder="enter email" name="Email" required
+                                    class="story" />
+                                <input type="text" id="subject" placeholder="enter title" name="Title" required
+                                    class="story" />
+                                <p class="story label">tell us how mental health affects your life </p>
+                                <textarea id="affects" value="" placeholder="write here :)" name="mental health affects"
+                                    required class="story"></textarea>
+                                <p class="story label">any ideas of how you would like your story portrayed in our game?
+                                </p>
+                                <textarea id="ideas" value=""
+                                    placeholder="think obstacle, effect, music, anything really..." name="Ideas"
+                                    required></textarea>
+                                <p class="story label">would you like to remain anonymous?</p>
+                                <select name="anonymous" id="anonymous" required>
+                                    <option value="yes">yes</option>
+                                    <option value="no">no</option>
+                                </select>
+                                <input type="submit" id="submit-form-story" value="submit >" class="story">
+                                <iframe name=" hidden_iframe" id="hidden_iframe" style="display: none"></iframe>
+                                <p style="display: none" id="success-message-story" class="story">form successfully
+                                    submitted!!</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="box join">
+                        <p>we love a great hen-trance</p>
+                        <h2>join the team</h2>
+                        <img src="assets/squiggly.png" width="25%" />
+                        <br />
+                        <p>we’re looking for female/nonbinary identifying students from across the globe with an
+                            interest in game dev. no experience required! </p>
+                        <button onclick="joinForm()" id="join-button">apply now ></button>
+                        <div class="form" id="form join-form" style="display: none">
+                            <form id="form" target="hidden_iframe">
+                                <input type="text" id="name" placeholder="enter name" name="Name" required
+                                    class="join" />
+                                <input type="email" id="email" placeholder="enter email" name="Email" required
+                                    class="join" />
+                                <input type="text" id="school" placeholder="current school" name="School" required
+                                    class="join" />
+                                <input type="text" id="gradYear" placeholder="graduation year" name="Graduation Year"
+                                    required class="join" />
+                                <input type="text" id="timeZone" placeholder="time zone" name="Time Zone" required
+                                    class="join" />
+                                <p class="join label">what skills are you interested in developing? </p>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" value="game design" name="interests" class="join" />
+                                    <label for="game design">game design</label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" value="coding" name="interests" class="join" />
+                                    <label for="coding">coding</label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" value="graphic design" name="interests" class="join" />
+                                    <label for="graphic design">graphic design</label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" value="sound design" name="interests" class="join" />
+                                    <label for="sound design">sound design</label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" value="3D modeling" name="interests" class="join" />
+                                    <label for="3D modeling">3D modeling</label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" value=" animation" name="interests" class="join" />
+                                    <label for="animation">animation</label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" value="web development" name="interests" class="join" />
+                                    <label for="web development">web development</label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" value="social media management" name="interests"
+                                        class="join" />
+                                    <label for="social media management">social media management</label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" value="financial management" name="interests" class="join" />
+                                    <label for="financial management">financial management</label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" value="outreach" name="interests" class="join" />
+                                    <label for="outreach">outreach</label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" value="other" name="interests" class="join" />
+                                    <label for="other">other</label>
+                                </div>
+                                <p class="join label">we meet bi-weekly on Zoom—does this sound realistic for you?
+                                </p>
+                                <select name="zoom meeting" id="zoom meeting" required>
+                                    <option value="yes">yes</option>
+                                    <option value="no">no</option>
+                                </select>
+                                <p class="join label">how many hours are you willing to spend per week outside of
+                                    meetings?</p>
+                                <input type="number" id="hours" placeholder="enter hours" name="Hours" class="join"
+                                    required />
+                                <p class="join label">anything else you’d like us to know?</p>
+                                <textarea id="additionalNotes" value="" placeholder="tell use here!"
+                                    name="Additional Notes" class="join"></textarea>
+                                <p class="join label">finally, the best way to eat eggs??</p>
+                                <textarea id="eggs" value="" placeholder="scrambled, fried, poached..." name="Eggs"
+                                    required></textarea>
+                                <input type="submit" id="submit-form-join" value="submit >" class="join">
+                                <iframe name=" hidden_iframe" id="hidden_iframe" style="display: none"></iframe>
+                                <p style="display: none" id="success-message-join" class="join">form successfully
+                                    submitted!!</p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="box collaborate">
+                        <p>chicken or the egg? we like both</p>
+                        <h2>let's collaborate</h2>
+                        <img src="assets/squiggly.png" width="25%" />
+                        <br />
+                        <p>work with us to add a guest chapter to [game name]! or we can help you out with your
+                            project—just shoot us a message at <a class="emails"
+                                href="mailto:[gamename]@chookstudios.org">[gamename]@chookstudios.org!</a></p>
+                        <a class="emails" href="mailto:hello@chookstudios.org"
+                            style="text-decoration: none; float: right">email
+                            ></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="box donate">
+                        <p>developing games isn’t cheap (cheep)</p>
+                        <h2>donate or sponsor</h2>
+                        <img src="assets/squiggly.png" width="25%" />
+                        <br />
+                        <p>support our journey to creating more impactful, fun games! your gift will let our dreams take
+                            flight (i.e. our meetings won’t be suddenly cut off after 40 minutes) </p>
+                        <button onclick="alert('coming soon')">donate now ></button>
+                    </div>
+                    <div class="box socials">
+                        <p>check (chick?) us out!</p>
+                        <h2>social media</h2>
+                        <img src="assets/squiggly.png" width="25%" />
+                        <br />
+                        <p>yea, we’re on a lot of platforms—follow us for more frequently updated info on our game dev
+                            process and team—and of course, more chicken jokes.</p>
+                        <div class="icons-container">
+                            <a href="https://instagram.com" target="_blank" class="icons"> <i
+                                    class="fa-brands fa-instagram" id="icon"></i></a>
+                            <a href="https://facebook.com" target="_blank" class="icons"><i
+                                    class="fa-brands fa-facebook" id="icon"></i></a>
+                            <a href="https://twitter.com" target="_blank" class="icons"><i class="fa-brands fa-twitter"
+                                    id="icon"></i></a>
+                            <a href="https://discord.com" target="_blank" class="icons"><i class="fa-brands fa-discord"
+                                    id="icon"></i></a>
+                            <a href="https://dribbble.com" target="_blank" class="icons"><i
+                                    class="fa-brands fa-dribbble" id="icon"></i></a>
+                            <a href="https://www.behance.net" target="_blank" class="icons"><i
+                                    class="fa-brands fa-behance" id="icon"></i></a>
+                            <a href="https://reddit.com" target="_blank" class="icons"><i class="fa-brands fa-reddit"
+                                    id="icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript">
-
-
     var $form = $('form#form'),
-        url = 'https://script.google.com/macros/s/AKfycbxlbiSYGm5xUPBvljrkoE1hnUIHqeS_X4yhiJO2HbX9pnLXcDgkjsQmU2RUW9vAjG20/exec'
-
+        url = 'https://script.google.com/macros/s/AKfycbxa-jRE7kpkJCqgsXKKlkbBqsS_HLEgD2fQYwqdDhvRfWtnJsxZLrW_cACMfEUGp3_D/exec'
     $('#submit-form').on('click', function (e) {
+        console.log("clicked")
         var inputs = document.getElementsByTagName('input');
         var textarea = document.getElementById("message");
-        var data = {};
+        var data = { 'type': 'general' };
         for (var i = 0; i < inputs.length; i++) {
-            data[inputs[i].name] = inputs[i].value
+            if (inputs[i].className == e.currentTarget.className)
+                data[inputs[i].name] = inputs[i].value
         }
         data[textarea.name] = textarea.value;
-        if (validate) {
+        if (validate(e.currentTarget)) {
             e.preventDefault();
             var jqxhr = $.ajax({
                 url: url,
@@ -74,49 +256,178 @@
                 dataType: "json",
                 data: data
             }).done(
-                success()
+                success("general")
             ).fail((e) => {
                 console.log("error " + e)
-                var p = document.getElementById('success-message')
+                var p = document.getElementById('success-message-general')
                 p.validate = "Oops! There was an error. Please try again."
                 p.style.display = "block";
             });
         }
     })
 
-    function validate() {
+    $('#submit-form-story').on('click', function (e) {
+        console.log("clicked story")
         var inputs = document.getElementsByTagName('input');
-        var bool = true;
+        var textarea = document.getElementById("affects");
+        var textarea1 = document.getElementById("ideas")
+        var anonymous = document.getElementById('anonymous')
+        var data = { 'type': 'story' };
         for (var i = 0; i < inputs.length; i++) {
-            if (inputs[i].hasAttribute("required")) {
+            if (inputs[i].className == e.currentTarget.className)
+                data[inputs[i].name] = inputs[i].value
+        }
+        data[textarea.name] = textarea.value;
+        data[textarea1.name] = textarea1.value;
+        data[anonymous.name] = anonymous.value;
+
+        if (validate(e.currentTarget)) {
+            e.preventDefault();
+            var jqxhr = $.ajax({
+                url: url,
+                method: "GET",
+                dataType: "json",
+                data: data
+            }).done(
+                success("story")
+            ).fail((e) => {
+                console.log("error " + e)
+                var p = document.getElementById('success-message-story')
+                p.validate = "Oops! There was an error. Please try again."
+                p.style.display = "block";
+            });
+        }
+    })
+
+    $('#submit-form-join').on('click', function (e) {
+        console.log("clicked join")
+        var inputs = document.getElementsByTagName('input');
+        var data = { 'type': 'join' };
+        var checkboxArr = [];
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].className == e.currentTarget.className) {
+                if (inputs[i].type == "checkbox") {
+                    if (inputs[i].checked) {
+                        checkboxArr.push(inputs[i].value)
+                    }
+                } else {
+                    data[inputs[i].name] = inputs[i].value;
+                }
+            }
+        }
+        data["interests"] = checkboxArr.toString();
+        var zoom = document.getElementById("zoom meeting");
+        data[zoom.name] = zoom.value;
+
+        var textarea = document.getElementById("additionalNotes");
+        data[textarea.name] = textarea.value
+
+        textarea = document.getElementById("eggs")
+        data[textarea.name] = textarea.value;
+
+        if (validate(e.currentTarget)) {
+            e.preventDefault();
+            var jqxhr = $.ajax({
+                url: url,
+                method: "GET",
+                dataType: "json",
+                data: data
+            }).done(
+                success("join")
+            ).fail((e) => {
+                console.log("error " + e)
+                var p = document.getElementById('success-message-join')
+                p.validate = "Oops! There was an error. Please try again."
+                p.style.display = "block";
+            });
+        }
+    })
+
+    function validate(submit) {
+        var inputs = document.getElementsByTagName('input');
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].hasAttribute("required") && inputs[i].className == submit.className) {
                 if (inputs[i].value == "") {
-                    alert("Please fill all required fields");
                     return false;
                 }
             }
         }
-        var textarea = document.getElementById("message");
-        if (textarea.hasAttribute('required') && textarea.value == "") {
-            alert("Please fill all required fields")
-            return false;
+        var textareas = document.getElementsByTagName('textarea');
+        for (var i = 0; i < textareas.length; i++) {
+            if (textareas[i].hasAttribute("required") && textareas[i].className == submit.className) {
+                if (textareas[i].value == "") {
+                    return false;
+                }
+            }
         }
         return true;
     }
 
-    function success() {
-        var p = document.getElementById('success-message').style.display = "block";
+    function success(form) {
+        var p = document.getElementById('success-message-' + form).style.display = "block";
         var inputs = document.getElementsByTagName('input');
         for (var i = 0; i < inputs.length; i++) {
-            if (inputs[i].hasAttribute('required')) {
+            if (inputs[i].type != "submit") {
                 inputs[i].value = "";
             }
         }
-        var textarea = document.getElementById("message");
-        textarea.value = ""
-        setTimeout(() => {
-            document.getElementById('success-message').style.display = "none";
+        var textareas = document.getElementsByTagName('textarea')
+        for (var i = 0; i < textareas.length; i++) {
+            textareas[i].value = "";
+        }
+        $('input[type=checkbox]').prop('checked', false);
 
-        }, 4000);
+        setTimeout(() => {
+            document.getElementById('success-message-' + form).style.display = "none";
+            switch (form) {
+                case "general":
+                    generalForm();
+                    break;
+                case "story":
+                    storyForm();
+                    break;
+                case "join":
+                    joinForm();
+                    break
+                default:
+                    break;
+            }
+        }, 3000);
+    }
+</script>
+
+<script>
+    function generalForm() {
+        var btn = document.getElementById('general-button');
+        if (btn.innerText != "show less") {
+            document.getElementById('form general-form').style.display = "block";
+            btn.innerText = "show less"
+        } else {
+            document.getElementById('form general-form').style.display = "none";
+            btn.innerText = "say hi >"
+        }
+    }
+
+    function storyForm() {
+        var btn = document.getElementById('story-button');
+        if (btn.innerText != "show less") {
+            document.getElementById('form story-form').style.display = "block";
+            btn.innerText = "show less"
+        } else {
+            document.getElementById('form story-form').style.display = "none";
+            btn.innerText = "form >"
+        }
+    }
+
+    function joinForm() {
+        var btn = document.getElementById('join-button');
+        if (btn.innerText != "show less") {
+            document.getElementById('form join-form').style.display = "block";
+            btn.innerText = "show less"
+        } else {
+            document.getElementById('form join-form').style.display = "none";
+            btn.innerText = "apply now >"
+        }
     }
 </script>
 
