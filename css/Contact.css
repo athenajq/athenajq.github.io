@@ -50,13 +50,15 @@ body {
 .icons:visited,
 .emails:link,
 .icons:link,
-.emails:hover,
-.icons:hover,
 .emails:active,
 .icons:active {
   color: #19FFF1;
 }
 
+.emails:hover,
+.icons:hover {
+  color: #FFE99B;
+}
 
 
 h2 {

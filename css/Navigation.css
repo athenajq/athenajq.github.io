@@ -55,12 +55,12 @@ body {
 
 /* unvisited link */
 a:link {
-  color: #58BCD2;
+  color: #5897D2;
 }
 
 /* visited link */
 a:visited {
-  color: #58BCD2;
+  color: #5897D2;
 }
 
 a:hover {
@@ -68,7 +68,7 @@ a:hover {
 }
 
 a:active {
-  color: #58BCD2;
+  color: #5897D2;
 }
 
 #main {
