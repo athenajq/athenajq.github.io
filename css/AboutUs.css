@@ -1,76 +1,100 @@
-@font-face {
-  font-family: "Lora";
-  src: local("Lora"),
-    url(../fonts/Lora-VariableFont_wght.ttf) format("truetype");
+body {
+  background-color: #5897D2;
+  font-family: "Inconsolata", sans-serif;
+  color: #fff;
 }
 
-p {
-  font-family: Lora, sans-serif;
-}
-
-.mission-container {
-  font-family: Lora, sans-serif;
+.aboutus-container {
   width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  margin-top: 40px;
-  padding-top: 20px;
+  align-items: center;
 }
 
-.mission-statement-container {
-  width: 40vw;
-  padding: 30px;
-  font-family: Lora, sans-serif;
-  font-size: 1.5em;
-  display: inline-block;
+.container {
+  display: flex;
+  width: 70vw;
+  justify-content: space-between;
+}
+
+.about {
+  text-align: right;
 }
 
 .mission-image {
-  background-color: #e2e2e2;
-  width: 30vw;
-  height: 30vw;
-  display: inline-block;
-  margin: 40px;
-  padding: 20px;
+  width: 35vw;
+}
+
+.title {
+  margin: 0px;
+  padding: 0px;
+  text-align: right;
+  color: #F8C0E8;
+}
+
+.subtitle {
+  margin: 0px;
+  padding: 0px;
+  text-align: right;
+  color: #19FFF1;
+  margin: 10px 0px;
+  font-size: calc(2vmin + 5px);
+}
+
+.body-text {
+  margin: 0px;
+  padding: 0px;
+  text-align: right;
+  font-size: calc(2vmin + 10px);
+  color: #fff;
+  width: 80%;
+  float: right;
 }
 
 .team-container {
-  font-family: Lora, sans-serif;
-  font-size: 1.5em;
   display: inline-block;
-  height: 85vh;
+  height: 90vh;
+  margin-top: 10vh;
+  width: 100vw;
 }
 
-.team-title {
-  padding-left: 50px;
-  margin-left: 50px;
+.bio-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .team-bios {
   width: 90vw;
-  align-self: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 50%;
-  transform: translate(50%, 0%);
+  justify-content: space-around;
+  align-items: stretch;
+  margin: 0px;
+  flex-direction: row;
+  flex-wrap: wrap
 }
 
 .team-bio-image {
-  background-color: #e2e2e2;
-  height: 40vh;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  top: 0px;
 }
 
 .team-bio {
-  margin: 0px 20px;
+  width: 12vw;
+  height: 100%;
 }
 
 .team-bio-name {
   font-weight: bolder;
   width: 100%;
   text-align: center;
-  margin: 10px 0px;
+  /* margin: 10px 0px; */
+  color: #F8C0E8;
+  font-size: calc(2vmin + 10px);
 }
 
 .team-bio-description {
@@ -86,4 +110,141 @@ p {
   margin-top: 0px;
   padding-top: 0px;
   font-size: large;
+}
+
+.scroll-down {
+  position: absolute;
+  width: 30%;
+  height: 15vh;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+#text {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  font-size: calc(2vmin + 5px);
+  color: #fff;
+}
+
+.text {
+  margin: 10px 0px;
+  padding: 0px;
+  text-align: left;
+  font-size: calc(2vmin + 5px);
+  color: #fff;
+}
+
+
+#circle {
+  margin-top: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: calc(2vmin + 30px);
+  color: #F8C0E8;
+}
+
+#arrow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFE99B;
+  font-size: calc(2vmin + 10px);
+}
+
+.socials {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 40px;
+}
+
+.icons {
+  font-size: calc(2vmin + 10px);
+  color: #19FFF1;
+}
+
+a {
+  /* font-size: calc(1vmin + px); */
+  color: #19FFF1;
+}
+
+.icons:visited,
+a:visited,
+.icons:link,
+a:link,
+.icons:active,
+a:active {
+  color: #19FFF1;
+}
+
+.icons:hover {
+  color: #FFE99B;
+}
+
+.values-container {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.values h1,
+img,
+p {
+  text-align: left;
+}
+
+button {
+  font-family: "Inconsolata", sans-serif;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  font-size: calc(2vmin + 10px);
+  /* display: inline-block; */
+  margin: 5px 0px;
+  font-variation-settings: 'wght' 500;
+}
+
+#icon-button {
+  font-size: calc(1vmin + 10px);
+  float: right;
+  color: #FFE99B;
+}
+
+#button-container {
+  width: 90%;
+}
+
+.scroll-down-values {
+  position: absolute;
+  top: 185vh;
+}
+
+
+.team-container p,
+img {
+  padding-right: 50px;
+}
+
+#join {
+  width: 50vw;
+  position: absolute;
+  top: 295vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#meet-team {
+  padding-right: 50px;
+  padding-top: 50px;
 }

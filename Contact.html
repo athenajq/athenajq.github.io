@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="./css/Contact.css">
     <link rel="stylesheet" href="./css/Navigation.css">
     <script src="https://kit.fontawesome.com/415c7efa4d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/cookies.js"></script>
 </head>
 
 <body>
@@ -61,8 +63,18 @@
                         <p>work with us to share about your mental health journey through [game name]. email <a
                                 class="emails" href="mailto:[gamename]@chookstudios.org">[game
                                 name]@chookstudios.org</a> or fill out the form below!</p>
-                        <button onclick="storyForm()" id="story-button">form ></button>
-                        <div class="form" id="form story-form" style="display: none">
+                        <script>
+                            function checkPrev() {
+                                let x = getCookie("previousUrl")
+                                if (x == (window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1)) + "index.html") {
+                                    setCookie("previousUrl", "", 0);
+                                    x = getCookie("previousUrl")
+                                    storyForm();
+                                }
+                            }
+                        </script>
+                        <button onclick="storyForm()" id="story-button" onfocus="checkPrev()">form ></button>
+                        <div class=" form" id="form story-form" style="display: none">
                             <form id="form" target="hidden_iframe">
                                 <input type="text" id="name" placeholder="enter name" name="Name" required
                                     class="story" />
@@ -92,6 +104,16 @@
                     </div>
                 </div>
                 <div class="row">
+                    <script>
+                        function checkPrevAbout() {
+                            let x = getCookie("previousUrl")
+                            if (x == (window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1)) + "AboutUs.html") {
+                                setCookie("previousUrl", "", 0);
+                                x = getCookie("previousUrl")
+                                joinForm();
+                            }
+                        }
+                    </script>
                     <div class="box join">
                         <p>we love a great hen-trance</p>
                         <h2>join the team</h2>
@@ -99,7 +121,7 @@
                         <br />
                         <p>we’re looking for female/nonbinary identifying students from across the globe with an
                             interest in game dev. no experience required! </p>
-                        <button onclick="joinForm()" id="join-button">apply now ></button>
+                        <button onclick="joinForm()" id="join-button" onfocus="checkPrevAbout()">apply now ></button>
                         <div class="form" id="form join-form" style="display: none">
                             <form id="form" target="hidden_iframe">
                                 <input type="text" id="name" placeholder="enter name" name="Name" required
@@ -168,6 +190,9 @@
                                     meetings?</p>
                                 <input type="number" id="hours" placeholder="enter hours" name="Hours" class="join"
                                     required />
+                                <p class="join label">why do you want to join chook studios? </p>
+                                <textarea id="why" value="" placeholder="write here!" name="why"
+                                    class="join"></textarea>
                                 <p class="join label">anything else you’d like us to know?</p>
                                 <textarea id="additionalNotes" value="" placeholder="tell use here!"
                                     name="Additional Notes" class="join"></textarea>
@@ -236,7 +261,6 @@
         </div>
     </div>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript">
     var $form = $('form#form'),
         url = 'https://script.google.com/macros/s/AKfycbxa-jRE7kpkJCqgsXKKlkbBqsS_HLEgD2fQYwqdDhvRfWtnJsxZLrW_cACMfEUGp3_D/exec'
@@ -325,6 +349,9 @@
         data[textarea.name] = textarea.value
 
         textarea = document.getElementById("eggs")
+        data[textarea.name] = textarea.value;
+
+        textarea = document.getElementById("why")
         data[textarea.name] = textarea.value;
 
         if (validate(e.currentTarget)) {

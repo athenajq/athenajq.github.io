@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="./css/Navigation.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="https://kit.fontawesome.com/415c7efa4d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/cookies.js"></script>
 </head>
 
 <body>
@@ -31,11 +33,15 @@
         </div>
 
         <div class="button">
-            <a href="Story.html" id="btn">tell your story ></a>
+            <a href="Contact.html#story-button" id="btn" onclick="setCookies()">tell your story ></a>
         </div>
     </div>
 </body>
-
+<script>
+    function setCookies() {
+        setCookie("previousUrl", window.location.href, 1);
+    }
+</script>
 <script>
     window.onload = function () {
         // array with texts to type in typewriter
