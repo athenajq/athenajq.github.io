@@ -51,7 +51,7 @@
                                 <input type="submit" id="submit-form" value="submit >" class="general">
                                 <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"></iframe>
                                 <p style="display: none" id="success-message-general" class="general">form successfully
-                                    submitted!!</p>
+                                    submitted!! we'll be in contact with you soon!</p>
                             </form>
                         </div>
                     </div>
@@ -66,7 +66,13 @@
                         <script>
                             function checkPrev() {
                                 let x = getCookie("previousUrl")
-                                if (x == (window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1)) + "index.html") {
+                                let url = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
+                                if (x == (url + "index.html")) {
+                                    setCookie("previousUrl", "", 0);
+                                    x = getCookie("previousUrl")
+                                    storyForm();
+                                }
+                                if (x === url + "Projects.html" && window.location.href.substring(window.location.href.lastIndexOf('/') + 1) == "Contact.html#story-button") {
                                     setCookie("previousUrl", "", 0);
                                     x = getCookie("previousUrl")
                                     storyForm();
@@ -98,7 +104,7 @@
                                 <input type="submit" id="submit-form-story" value="submit >" class="story">
                                 <iframe name=" hidden_iframe" id="hidden_iframe" style="display: none"></iframe>
                                 <p style="display: none" id="success-message-story" class="story">form successfully
-                                    submitted!!</p>
+                                    submitted!! we'll be in contact with you soon!</p>
                             </form>
                         </div>
                     </div>
@@ -107,7 +113,13 @@
                     <script>
                         function checkPrevAbout() {
                             let x = getCookie("previousUrl")
-                            if (x == (window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1)) + "AboutUs.html") {
+                            let url = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1)
+                            if (x == (url + "AboutUs.html")) {
+                                setCookie("previousUrl", "", 0);
+                                x = getCookie("previousUrl")
+                                joinForm();
+                            }
+                            if (x === url + "Projects.html" && window.location.href.substring(window.location.href.lastIndexOf('/') + 1) == "Contact.html#join-button") {
                                 setCookie("previousUrl", "", 0);
                                 x = getCookie("previousUrl")
                                 joinForm();
@@ -202,7 +214,7 @@
                                 <input type="submit" id="submit-form-join" value="submit >" class="join">
                                 <iframe name=" hidden_iframe" id="hidden_iframe" style="display: none"></iframe>
                                 <p style="display: none" id="success-message-join" class="join">form successfully
-                                    submitted!!</p>
+                                    submitted!! we'll be in contact with you soon!</p>
                             </form>
                         </div>
                     </div>

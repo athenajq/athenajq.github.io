@@ -1,82 +1,83 @@
-body{
-    padding-top: 20px;
-    margin-top: 20px;
+body {
+    height: 100vh;
 }
 
 .background {
     height: 100%;
-    width:100%;
+    width: 100%;
     background: linear-gradient(to right, #58D3EE 50%, #5897D2 50%, #5897D2 100%);
     font-family: "Inconsolata", sans-serif;
-    font-weight:90px;
+    color: #fff;
 }
 
 .container {
     display: flex;
-    flex-direction: column;
-    height: 100vh;
+    flex-direction: row;
+    height: 100%;
     width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+
+.game-name {
+    color: #5897D2;
+    font-size: calc(3vmin + 5px);
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 5px;
+    font-family: "Inconsolata", sans-serif;
+    font-variation-settings: 'wght' 900;
+}
+
+h4 {
+    margin-top: 10px;
+    margin: 0px;
+    padding: 0px;
+    font-size: calc(2vmin +15px);
 }
 
 .sec1 {
-    float: left;
-    max-width: 50wv;
-    height:auto;
-    position: absolute;
-    left: 7.820646506777893vw;
-    letter-spacing: 0.5px;
-    display: block;
-    padding-top:70px;
-    align-items:center;
+    padding: 0px;
+    margin: 0px;
+    width: 45vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .game-des {
-    color:white;
-    max-width:30vw;
-    X: 138px;
-    Y: 526px;
+    max-width: 30vw;
 }
 
-.squiggly {
-    width:125px;
-    height:15px;
-    display:flex;
-    flex-direction: column;
-}
-
-.game-volume {
-    X: 141.63px;
-    Y: 592.74px;
-    width: 291.55px;
-    height: 212.74px;
-    display:block;
+.game-design {
+    max-width: 25vw;
+    text-align: center;
 }
 
 .sec2 {
-    float: right;
-    max-width: 30vw;
-    height:auto;
-    position: absolute;
-    right: 7.820646506777893vw;
-    text-align: center;
-    letter-spacing: 0.5px;
-    display:block;
-    padding-top:70px;
+    padding: 0px;
+    margin: 0px;
+    width: 45vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .recruit {
     width: 198.63px;
-    height:200.56px;
-    padding top:70px;
-    display:block;
-    X: 987px;
-    Y: 247px;
+    height: 200.56px;
+    padding-top: 70px;
+    display: block;
     margin: 30px;
-}
-
-.game-name {
-    font-size: 3vw;
-    font-weight: bold;
 }
 
 .socials {
@@ -84,30 +85,59 @@ body{
     bottom: 0px;
     left: 0px;
     padding: 40px;
-    width:15vw;
+    width: 15vw;
     display: inline-block;
-    float: left;
 }
 
 .icons {
     font-size: calc(2vmin + 10px);
     color: #DE73EF;
-  }
-  
-  a {
+}
+
+a {
     /* font-size: calc(1vmin + px); */
     color: #DE73EF;
-  }
-  
-  .icons:visited,
-  a:visited,
-  .icons:link,
-  a:link,
-  .icons:active,
-  a:active {
+    text-decoration: none;
+
+}
+
+.icons:visited,
+a:visited,
+.icons:link,
+a:link,
+.icons:active,
+a:active {
     color: #DE73EF;
-  }
-  
-  .icons:hover {
+    text-decoration: none;
+}
+
+#story:hover,
+#join:hover,
+.icons:hover {
     color: #FFE99B;
-  }
+}
+
+p {
+    font-size: calc(2vmin + 4px);
+    margin: 0;
+    padding: 0;
+}
+
+#squiggly {
+    margin-bottom: 10px;
+}
+
+#story {
+    font-variation-settings: 'wght' 500;
+    color: #DE73EF;
+}
+
+#join {
+    font-variation-settings: 'wght' 500;
+    color: #F8C0E8;
+}
+
+img {
+    padding: 0;
+    margin: 0;
+}

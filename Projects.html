@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="./css/Navigation.css">
     <link rel="stylesheet" href="./css/Projects.css">
     <script src="https://kit.fontawesome.com/415c7efa4d.js" crossorigin="anonymous"></script>
+    <script src="js/cookies.js"></script>
 </head>
 
 <body>
@@ -11,7 +12,7 @@
         <ul>
             <li><a href="Contact.html">contact</a></li>
             <li><a href="Projects.html" style="color:#E360BF">projects</a></li>
-            <li><a href="AboutUs.html" >about</a></li>
+            <li><a href="AboutUs.html">about</a></li>
             <li><a href="Play.html">play ></a></li>
             <li style="flex-grow: 5;"><a></a></li>
             <li style="font-variation-settings: 'wght' 900;"><a href="index.html" id="main">chook<br />studios</a></li>
@@ -20,17 +21,19 @@
     <div class="background">
         <div class="container">
             <div class="sec1">
-                <img src="assets/gamedoodle.png" class="game-volume">
+                <img src="assets/gamedoodle.png">
                 <section class="game-des">
-                    <h2 style="color:#5897D2">Buoy</h2>
-                    <h4>Volume 1 Ebb, Volume II Flow</h4>
-                    <div class="squiggly">
-                        <img src="assets/pinksquiggly.png">
-                    </div>
+                    <h1 class="title">games</h1>
+                    <h2 class="game-name">Buoy</h2>
+                    <p>Volume 1 Ebb, Volume II Flow</p>
+                    <img src="assets/pinksquiggly.png" width="25%" id="squiggly">
                     <p>A 2D platformer updated in monthly segemnts (think webcomics or magazine periodicals) that
                         highlights real-life teen experiences with mental health. <br>
                         <br>
-                        <font color="#DE73EF"> Want to share your story or create a guest segment? </font>Fill out
+                        <a id="story" href="Contact.html#story-button" onclick="setCookies()"> Want to share your story
+                            or create a guest
+                            segment?
+                        </a>Fill out
                         this
                         quick form or send a message our way!
                     </p><br>
@@ -38,28 +41,40 @@
             </div>
             <div class="sec2">
                 <img src="assets/chick.png" class="recruit">
-                <section>
-                    <h2>What's to Come</h2>
+                <section class="game-design">
+                    <h1>What's to Come</h1>
                     <p>Chook Studios is kind of like a spring chicken..so for now we're going to keep uploading
                         chapters of
                         Buoy. <br>
                         <br>In the future, though, we hope to address/educate about climate justice and fast fashion
                         through games!
                     </p>
-                    <p>Interested in jelping us get these games started?<font color="#F8C0E8"> Join us today!
-                        </font> No experience necessary :)</p>
+                    <br />
+                    <p>Interested in jelping us get these games started?<a href="Contact.html#join-button"
+                            onclick="setCookies()" id="join">
+                            Join us
+                            today!
+                        </a> No experience necessary :)</p>
                 </section>
             </div>
             <div class="socials" display=inline-block>
                 <a href="https://instagram.com" target="_blank" class="icons"> <i class="fa-brands fa-instagram"
-                    id="icon"></i></a>
+                        id="icon"></i></a>
                 <a href="https://www.tiktok.com" target="_blank" class="icons"><i class="fa-brands fa-tiktok" id=""
-                    icon></i></a>
-                <a href="https://twitter.com" target="_blank" class="icons"><i class="fa-brands fa-twitter" id="icon"></i></a>
-                <a href="https://discord.com" target="_blank" class="icons"><i class="fa-brands fa-discord" id="icon"></i></a>
-            </div> 
+                        icon></i></a>
+                <a href="https://twitter.com" target="_blank" class="icons"><i class="fa-brands fa-twitter"
+                        id="icon"></i></a>
+                <a href="https://discord.com" target="_blank" class="icons"><i class="fa-brands fa-discord"
+                        id="icon"></i></a>
+            </div>
         </div>
     </div>
 </body>
+
+<script>
+    function setCookies() {
+        setCookie("previousUrl", window.location.href, 1);
+    }
+</script>
 
 </html>
