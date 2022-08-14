@@ -200,3 +200,13 @@ input[type="checkbox"] {
   font-size: calc(2vmin + 5px);
   margin: 5px;
 }
+
+#donate {
+  padding: 10px 0px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Inconsolata", "san-serif";
+  float: right !important;
+  color: #19FFF1;
+  font-size: calc(2vmin + 3px);
+}
