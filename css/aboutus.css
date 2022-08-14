@@ -236,11 +236,9 @@ img {
 }
 
 #join {
-  width: 50vw;
-  position: absolute;
-  top: 295vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: calc(2vmin + 3px);
+  width: 100vw;
+  padding-top: 50px;
   text-align: center;
 }
 
