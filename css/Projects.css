@@ -72,13 +72,6 @@ h4 {
     align-items: center;
 }
 
-.recruit {
-    width: 198.63px;
-    height: 200.56px;
-    padding-top: 70px;
-    display: block;
-    margin: 30px;
-}
 
 .socials {
     position: absolute;
@@ -102,11 +95,8 @@ a {
 }
 
 .icons:visited,
-a:visited,
 .icons:link,
-a:link,
-.icons:active,
-a:active {
+.icons:active {
     color: #DE73EF;
     text-decoration: none;
 }

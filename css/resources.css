@@ -1,0 +1,42 @@
+body,
+html {
+    height: 100%;
+    width: 100%;
+    background-color: #5897D2;
+}
+
+.main {
+    font-family: "Inconsolata", sans-serif;
+    color: #fff;
+    margin-top: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links {
+    color: #19FFF1;
+    text-decoration: none;
+}
+
+.links:visited,
+.links:link,
+.links:active {
+    color: #19FFF1;
+    text-decoration: none;
+}
+
+.links:hover {
+    color: #FFE99B;
+    text-decoration: none;
+}
+
+.content {
+    width: 80%;
+}
+
+h1 {
+    color: #F8C0E8;
+    font-variation-settings: 'wght' 900;
+    font-size: calc(2vmin + 8px);
+}

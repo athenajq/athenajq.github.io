@@ -7,8 +7,8 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Open Contact.html",
-            "file": "/Users/athena/projects/athenajq.github.io/Contact.html"
+            "name": "Open in Chrome",
+            "file": "/Users/athena/projects/athenajq.github.io/index.html"
         }
     ]
 }

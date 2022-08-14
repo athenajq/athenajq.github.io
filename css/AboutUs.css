@@ -168,21 +168,21 @@ body {
   color: #19FFF1;
 }
 
-a {
-  /* font-size: calc(1vmin + px); */
+.link {
   color: #19FFF1;
 }
 
 .icons:visited,
-a:visited,
+.link:visited,
 .icons:link,
-a:link,
+.link:link,
 .icons:active,
-a:active {
+.link:active {
   color: #19FFF1;
 }
 
-.icons:hover {
+.icons:hover,
+.link:hover {
   color: #FFE99B;
 }
 
