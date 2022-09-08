@@ -15,7 +15,6 @@ body {
 .container {
   display: flex;
   width: 70vw;
-  justify-content: space-between;
 }
 
 .about {
@@ -224,9 +223,14 @@ button {
   width: 90%;
 }
 
-.scroll-down-values {
+.scroll-down-safespace {
   position: absolute;
   top: 185vh;
+}
+
+.scroll-down-values {
+  position: absolute;
+  top: 285vh;
 }
 
 
@@ -245,4 +249,17 @@ img {
 #meet-team {
   padding-right: 50px;
   padding-top: 50px;
+}
+
+.safespace-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.safespace {
+  text-align: right;
+  width: 70vw;
 }
