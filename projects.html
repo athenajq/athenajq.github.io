@@ -13,10 +13,17 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-ZD3SHCWSJJ');
+  gtag('config', 'G-ZD3SHCWSJJ', {
+    'page_title': 'projects'
+  });
 </script>
 
 <body>
+    <script>gtag('event', 'screen_view', {
+        'app_name': 'chook studios',
+        'screen_name': 'projects'
+      });
+    </script> 
     <div class="navigation">
         <ul>
             <li><a href="contact.html">contact</a></li>

@@ -14,11 +14,18 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-ZD3SHCWSJJ');
+  gtag('config', 'G-ZD3SHCWSJJ', {
+    'page_title': 'contact'
+  });
 </script>
 
 <body>
     <div class="main">
+        <script>gtag('event', 'screen_view', {
+            'app_name': 'chook studios',
+            'screen_name': 'contact'
+          });
+        </script> 
         <div class="navigation">
             <ul>
                 <li><a href="contact.html" style="color:#E360BE">contact</a></li>
