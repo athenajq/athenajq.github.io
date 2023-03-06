@@ -40,3 +40,12 @@ h1 {
     font-variation-settings: 'wght' 900;
     font-size: calc(2vmin + 8px);
 }
+
+#chat:hover, #dial:hover, #text:hover, #dontcallpolice:hover {
+    color: #F8C0E8;
+}
+
+h1:hover 
+{
+    color: rgba(248, 192, 232, 0.7);
+}

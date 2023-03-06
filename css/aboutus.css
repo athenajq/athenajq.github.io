@@ -15,27 +15,30 @@ body {
 .container {
   display: flex;
   width: 70vw;
+  justify-content: center;
+  align-items: center;
 }
 
 .about {
-  text-align: right;
+  text-align: left;
 }
 
 .mission-image {
   width: 35vw;
+  height: 100%;
 }
 
 .title {
   margin: 0px;
   padding: 0px;
-  text-align: right;
+  text-align: left;
   color: #F8C0E8;
 }
 
 .subtitle {
   margin: 0px;
   padding: 0px;
-  text-align: right;
+  text-align: left;
   color: #19FFF1;
   margin: 10px 0px;
   font-size: calc(2vmin + 5px);
@@ -44,11 +47,10 @@ body {
 .body-text {
   margin: 0px;
   padding: 0px;
-  text-align: right;
+  text-align: left;
   font-size: calc(2vmin + 10px);
   color: #fff;
   width: 80%;
-  float: right;
 }
 
 .team-container {
@@ -56,6 +58,7 @@ body {
   height: 90vh;
   margin-top: 10vh;
   width: 100vw;
+  margin-right: 0;
 }
 
 .bio-container {
@@ -194,6 +197,11 @@ body {
   align-items: center;
 }
 
+.values {
+  height: 100%;
+  width: 100%;
+}
+
 .values h1,
 img,
 p {
@@ -241,13 +249,12 @@ img {
 
 #join {
   font-size: calc(2vmin + 3px);
-  width: 100vw;
   padding-top: 50px;
   text-align: center;
 }
 
 #meet-team {
-  padding-right: 50px;
+  padding-left: 50px;
   padding-top: 50px;
 }
 
@@ -260,6 +267,6 @@ img {
 }
 
 .safespace {
-  text-align: right;
+  text-align: left;
   width: 70vw;
 }

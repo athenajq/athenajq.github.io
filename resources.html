@@ -39,22 +39,23 @@
         <div class="content">
             <p>If you, a family member, or a friend are in need of help, here are a list of resources you can use.
                 Note that all resources are for informational purposes only. The list is not comprehensive, and links
-                are not affiliated or endorsed.</p>
-            <h1>Dial 911</h1>
+                are not affiliated or endorsed. Click on the resources below to learn more</p>
+            <h1 id="911" onclick="toggle('911')">Dial 911</h1>
             <p>In an emergency, dial 911 for immediate crisis help.</p>
-            <p>
+            <p class="911-info" style="display: none">
                 If you dial 911, make sure to be specific about the crisis and provide as much information as possible
                 so officers can respond appropriately. Emphasize that it is a mental health crisis. Request a CIT
                 (Crisis Intervention Team) officer if available. For more information about when/what to dial 911, look
                 into <a class="links" target="_blank"
                     href="https://reddotalert.com/managing-a-mental-health-crisis-when-should-you-call-911/">this
                     RedDot article.</a></p>
-            <p>
+            <p class="911-info" style="display: none">
                 According to the National Alliance on Mental Illness <a class="links" target="_blank"
                     href="https://www.nami.org/Your-Journey/Family-Members-and-Caregivers/Calling-911-and-Talking-with-Police">NAMI</a>,
                 the police can help someone voluntarily go to the hospital for help or force someone to involuntarily
                 get a mental health evaluation at the hospital (varies from state to state).
             </p>
+            <p class="911-info" style="display: none">
             Keep in mind that 911 may not fit your exact situation. According to <a class="links" target="_blank"
                 href="https://www.pewtrusts.org/en/research-and-analysis/issue-briefs/2021/10/new-research-suggests-911-call-centers-lack-resources-to-handle-behavioral-health-crises">PEW
                 research</a>,
@@ -66,51 +67,66 @@
                 directory.</a>
             </p>
 
-            <h1>Dial 988</h1>
+            <h1 id="988" onclick="toggle('988')">Dial 988</h1>
             <p>988 is the suicide and crisis lifeline. It’s the new number for the National Suicide Prevention Lifeline.
             </p>
-            <p>This line will connect you to trained counselors that will “listen, understand how [caller’s] problems
+            <p class="988-info" style="display: none">This line will connect you to trained counselors that will “listen, understand how [caller’s] problems
                 are affecting them, provide support, and connect [callers] to resources if necessary<a class="links"
                     target="_blank" href="https://988lifeline.org/current-events/the-lifeline-and-988/"> (Lifeline).</a>
                 For more information, look into <a class="links" target="_blank"
                     href="https://www.samhsa.gov/find-help/988/faqs">SAMHSA’s FAQ
                     page.</a></p>
-            <p>It’s also important to note that certain calls to 988 can be routed to 911 (SAMHSA states this occurs
+            <p class="988-info" style="display: none">It’s also important to note that certain calls to 988 can be routed to 911 (SAMHSA states this occurs
                 only to a small percentage). In that case, it’s possible that law enforcement will respond. This could
                 result in involuntary intervention with concerns mentioned under the “Dial 911” section. That’s why some
                 mental health advocates recommend calling warmlines, less intrusive numbers you can call for help in
                 non-emergencies. <a class="links" target="_blank" href="https://warmline.org/">Here is a warmline
                     directory
                     resource.</a></p>
-            <h1>Lifeline Chat</h1>
+            <h1 id="chat">Lifeline Chat</h1>
             <p>988’s website has a lifeline chat built into its web for free and confidential support.</p>
-            <h1>Text 741741</h1>
+            <h1 id="text">Text 741741</h1>
             <p>Text “HELLO” or “HOME” to 741741 to get support from a trained crisis counselor.</p>
-            <h1>Dial 1-(800)-622-HELP (4357)</h1>
+            <h1 id="dial">Dial 1-(800)-622-HELP (4357)</h1>
             <p>Dial 1-(800)-622-HELP for SAMHSA’s (Substance Abuse and Mental Health Services Administration) national
                 helpline for free, confidential support. </p>
-            <h1>Warm Lines</h1>
-            <p>Call warm lines, which you can find through <a class="links" target="_blank"
+            <h1 id="warmlines" onclick="toggle('warmlines')">Warm Lines</h1>
+            <p class="warmlines-info" style="display: none"></p>Call warm lines, which you can find through <a class="links" target="_blank"
                     href="https://warmline.org">this
                     directory</a> or <a class="links" target="_blank"
                     href="https://screening.mhanational.org/content/need-talk-someone-warmlines/">this one</a>, for
                 non-emergency, early intervention. </p>
-            <p>Warm lines are ‘peer-run’ and will connect callers to a listening line of people who are also in mental
+            <p class="warmlines-info" style="display: none">Warm lines are ‘peer-run’ and will connect callers to a listening line of people who are also in mental
                 health recovery. They’ll allow you to speak and receive support, confidentially and for free. </p>
-            <p>Some warm lines are only available during set hours. Some warm lines may also only let you speak for a
+            <p class="warmlines-info" style="display: none">Some warm lines are only available during set hours. Some warm lines may also only let you speak for a
                 certain time limit (like an hour). Others are available 24/7 and have unlimited call times. </p>
-            <h1>Bicycle Health for Opioid Use Disorder</h1>
-            <p>Bicycle Health provides Medication for Addiction Treatment online for <a class="links" target="_blank"
-                    href="https://www.bicyclehealth.com/blog/opioid-use-disorder-suicide">Opioid Use Disorder (OUD)</a>
-                for a monthly fee.</p>
+            <h1 id="dontcallpolice">Don't Call the Police</h1>
+            <p><a class="links" href="https://dontcallthepolice.com" target="_blank">dontcallthepolice.com</a> has many resources to find alternatives that aren't the police in times of need. They also include city/region specific resources. </p>
+            <!-- <h1 id="bicyclehealth" onclick="toggle('bicyclehealth')">Bicycle Health for Opioid Use Disorder</h1>
             <p>According to <a class="links" target="_blank"
-                    href="https://www.figma.com/exit?url=https%3A%2F%2Fwww.bicyclehealth.com%2F">Bicycle Health</a>,
-                “People who misuse prescription opioids have between 40% and 60% greater
-                odds of suicidal thoughts.” </p>
-            <p>Learn more about OUD <a class="links" target="_blank"
-                    href="https://www.bicyclehealth.com/blog/opioid-use-disorder-suicide">here.</a> </p>
+                href="https://www.figma.com/exit?url=https%3A%2F%2Fwww.bicyclehealth.com%2F">Bicycle Health</a>,
+            “People who misuse prescription opioids have between 40% and 60% greater
+            odds of suicidal thoughts. ”Learn more about OUD <a class="links" target="_blank"
+                href="https://www.bicyclehealth.com/blog/opioid-use-disorder-suicide">here.</a> </p>
+            <p class="bicyclehealth-info" style="display: none">Bicycle Health provides Medication for Addiction Treatment online for <a class="links" target="_blank"
+                    href="https://www.bicyclehealth.com/blog/opioid-use-disorder-suicide">Opioid Use Disorder (OUD)</a>
+                for a monthly fee.</p> -->
         </div>
     </div>
+
+    <script>
+        function toggle(id){ 
+            var info = document.getElementsByClassName(id+"-info")
+            for (let i = 0; i < info.length; i++) {
+            if(info[i] != null && info[i].style.display == "none") {
+                info[i].style.display = 'block'
+                // alert("changing to block")
+            } else {
+                info[i].style.display = 'none'
+                // alert("changing to hidden")
+            }}
+        }
+    </script>
 </body>
 
 </html>
