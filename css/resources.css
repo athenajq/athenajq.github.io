@@ -41,7 +41,7 @@ h1 {
     font-size: calc(2vmin + 8px);
 }
 
-#chat:hover, #dial:hover, #text:hover, #dontcallpolice:hover {
+#chat:hover, #dial:hover, #text:hover, #dontcallpolice:hover , #social-media:hover{
     color: #F8C0E8;
 }
 
