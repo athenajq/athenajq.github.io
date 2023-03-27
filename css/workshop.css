@@ -63,6 +63,11 @@ h4, p {
     margin-bottom: 5px;
 }
 
+h4 {
+    font-size: large;
+    color: #F8C0E8;
+}
+
 
 .link {
     color: #19FFF1;
