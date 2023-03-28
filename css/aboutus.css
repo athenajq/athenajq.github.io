@@ -159,7 +159,7 @@ body {
 }
 
 .socials {
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   left: 0px;
   padding: 40px;
@@ -372,7 +372,11 @@ img {
   }
 
   .team-bio-description {
-    font-size: 2.2vw;
+    font-size: 2.5vw;
     margin-bottom: 5px;
+  }
+
+  .body-text {
+    font-size:3vw;
   }
 }
