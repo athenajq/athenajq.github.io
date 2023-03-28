@@ -83,3 +83,21 @@ h4 {
   .link:hover {
     color: #FFE99B;
   }
+
+
+@media  (max-width: 600px) {
+    #show-mobile {
+      display: block;
+    }
+    #hide-mobile {
+      display: none;
+    }
+  
+  }
+    
+  @media (max-width: 600px) {
+    .tracks-container {
+        flex-direction: column;
+    }
+  }
+  

@@ -33,6 +33,7 @@ body {
   padding: 0px;
   text-align: left;
   color: #F8C0E8;
+  font-size: 4vw;
 }
 
 .subtitle {
@@ -41,14 +42,14 @@ body {
   text-align: left;
   color: #19FFF1;
   margin: 10px 0px;
-  font-size: calc(2vmin + 5px);
+  font-size: 3.2vw;
 }
 
 .body-text {
   margin: 0px;
   padding: 0px;
   text-align: left;
-  font-size: calc(2vmin + 10px);
+  font-size: 3vw;
   color: #fff;
   width: 80%;
 }
@@ -94,9 +95,8 @@ body {
   font-weight: bolder;
   width: 100%;
   text-align: center;
-  /* margin: 10px 0px; */
   color: #F8C0E8;
-  font-size: calc(2vmin + 10px);
+  font-size: 3vw;
 }
 
 .team-bio-description {
@@ -127,7 +127,7 @@ body {
   margin: 0px;
   padding: 0px;
   text-align: center;
-  font-size: calc(2vmin + 5px);
+  font-size: 2vw;
   color: #fff;
 }
 
@@ -135,7 +135,7 @@ body {
   margin: 10px 0px;
   padding: 0px;
   text-align: left;
-  font-size: calc(2vmin + 5px);
+  font-size: 2vw;
   color: #fff;
 }
 
@@ -145,7 +145,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
-  font-size: calc(2vmin + 30px);
+  font-size: 5vw;
   color: #F8C0E8;
 }
 
@@ -155,7 +155,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   color: #FFE99B;
-  font-size: calc(2vmin + 10px);
+  font-size: 3vw;
 }
 
 .socials {
@@ -166,7 +166,7 @@ body {
 }
 
 .icons {
-  font-size: calc(2vmin + 10px);
+  font-size: 3vw;
   color: #19FFF1;
 }
 
@@ -190,7 +190,7 @@ body {
 
 .values-container {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   padding-top: 20px;
   display: flex;
   justify-content: center;
@@ -215,14 +215,14 @@ button {
   color: #fff;
   text-align: left;
   text-decoration: none;
-  font-size: calc(2vmin + 10px);
+  font-size: 3vw;
   /* display: inline-block; */
   margin: 5px 0px;
   font-variation-settings: 'wght' 500;
 }
 
 #icon-button {
-  font-size: calc(1vmin + 10px);
+  font-size: 3vw;
   float: right;
   color: #FFE99B;
 }
@@ -248,7 +248,7 @@ img {
 }
 
 #join {
-  font-size: calc(2vmin + 3px);
+  font-size: 2.1vw;
   padding-top: 50px;
   text-align: center;
 }
@@ -269,4 +269,110 @@ img {
 .safespace {
   text-align: left;
   width: 70vw;
+}
+
+
+@media (min-width: 600px) and (max-width: 800px){
+  .team-bio-description {
+    font-size: 2.2vw;
+    margin-bottom: 5px;
+  }
+
+  .team-bios {
+    flex-wrap: wrap;
+  }
+
+  .team-bio{
+    width: 25vw;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+  .body-text {
+    font-size: 2vw;
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .title {
+    font-size: 3vw;
+  }
+  .subtitle {
+    font-size: 1.5vw;
+  }
+  .team-bio-name {
+    font-size: 2vw;
+  }
+  .body-text {
+    font-size:1.5vw;
+  }
+  
+  #join {
+    font-size: 1.5vw;
+  }
+  #button-container {
+    font-size: 0.3vw
+  }
+  #icon-button {
+    font-size: 2vw;
+  }
+  .text {
+    font-size: 1.3vw;
+  }
+  #text {
+    font-size: 1.3vw;
+  }
+  button {
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutus-container {
+    height: 45vh;
+    margin-top: 12vh;
+  }
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .title {
+    margin-top: 5px;
+  }
+
+  .team-container {
+    height: 45vh;
+  }
+
+  .values-container, #values-container {
+    height: 45vh;
+  }
+
+  .safespace-container{
+    height: 45vh;
+  }
+  .scroll-down {
+    display: none;
+  }
+
+  .scroll-down-safespace {
+    display: none;
+  }
+  .scroll-down-values {
+    display: none;
+  }
+
+  .team-bios {
+    flex-wrap: wrap;
+  }
+
+  .team-bio{
+    width: 33vw;
+  }
+
+  .team-bio-description {
+    font-size: 2.2vw;
+    margin-bottom: 5px;
+  }
 }

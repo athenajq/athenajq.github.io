@@ -5,7 +5,6 @@ body {
 .background {
     height: 100%;
     width: 100%;
-    background: linear-gradient(to right, #58D3EE 50%, #5897D2 50%, #5897D2 100%);
     font-family: "Inconsolata", sans-serif;
     color: #fff;
 }
@@ -44,38 +43,40 @@ h4 {
 .sec1 {
     padding: 0px;
     margin: 0px;
-    width: 45vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #58D3EE;;
 }
 
 .game-des {
-    max-width: 30vw;
+    width: 30vw;
 }
 
 .game-design {
-    max-width: 25vw;
+    width: 25vw;
     text-align: center;
 }
 
 .sec2 {
     padding: 0px;
     margin: 0px;
-    width: 45vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #5897D2;
 }
 
 
 .socials {
-    position: absolute;
-    bottom: 0px;
+    position: fixed;
+    bottom: 0;
     left: 0px;
     padding: 40px;
     width: 15vw;
@@ -130,4 +131,37 @@ p {
 img {
     padding: 0;
     margin: 0;
+}
+
+@media (min-width: 850px) and (max-width: 1000px){
+    
+}
+
+@media (min-width: 1000px) {
+  
+}
+
+@media (max-width: 600px) {
+  .container {
+      flex-direction: column;
+      margin-top: 15vh;
+  }
+
+  .sec1 {
+    padding-top: 20vh;
+    padding-bottom: 5vh;
+  }
+  .sec2  {
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+  }
+
+  .game-des {
+    width: 70vw;
+  }
+
+  .game-design {
+    width: 70vw;
+  }
+
 }
